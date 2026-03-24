@@ -82,6 +82,27 @@ code {
     top: 30%;
     background: #1e1e28;
     color: #e2e0ec;
+    border: 1px solid #2a2a38;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.sweet-alert h2 {
+    color: #e2e0ec;
+}
+.sweet-alert p {
+    color: #8a879e;
+}
+/* Success checkmark: cyan instead of green */
+.sa-success {
+    border-color: #3cc8c8 !important;
+}
+.sa-success .sa-line {
+    background-color: #3cc8c8 !important;
+}
+.sa-success .sa-placeholder {
+    border-color: rgba(60, 200, 200, 0.3) !important;
+}
+.sa-success .sa-fix {
+    background-color: #1e1e28 !important;
 }
 
 /* #General
