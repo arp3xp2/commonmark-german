@@ -224,7 +224,15 @@ $(document).ready(function() {
 	function generateMd(exerciseId) {
         var editor = $("#" + EDITOR_ID_PREFIX + exerciseId); 
 		var editortext = editor.val();		        
-        var md = window.markdownit();	
+        var md = window.markdownit();
+        // Post-process: convert task list syntax to checkboxes
+        var _origRender = md.render.bind(md);
+        md.render = function(src) {
+            var html = _origRender(src);
+            html = html.replace(/<li>\[ \]/g, '<li style="list-style:none;margin-left:-1.5em;"><input type="checkbox" disabled> ');
+            html = html.replace(/<li>\[x\]/g, '<li style="list-style:none;margin-left:-1.5em;"><input type="checkbox" checked disabled> ');
+            return html;
+        };
         
         // store the original text the first time we call this
         if (editor.data("original") == undefined) {
