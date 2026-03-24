@@ -6,7 +6,7 @@ German translation of the [CommonMark Tutorial](https://commonmark.org/help/tuto
 
 ## What's included
 - Markdown syntax reference in German
-- 10 interactive lessons (emphasis, paragraphs, headings, blockquotes, lists, links, images, code, nested lists, checklists)
+- 11 interactive lessons (emphasis, paragraphs, headings, blockquotes, lists, links, images, code, nested lists, checklists, + custom checklist lesson)
 - Dark theme (Outfit + JetBrains Mono)
 
 ## License
