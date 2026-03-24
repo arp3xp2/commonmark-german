@@ -3,10 +3,20 @@
 * https://www.opensource.org/licenses/mit-license.php
 */
 
+/* ============================================
+   Franklin PKI Dark Theme
+   bg: #0e0e12 | surface: #16161d | raised: #1e1e28 | border: #2a2a38
+   text: #e2e0ec | muted: #8a879e
+   accent (cyan): #3cc8c8 | secondary: #8ee8e0 | tertiary (amber): #fbbf24
+   fonts: Outfit + JetBrains Mono
+   ============================================ */
 
 html,body {
   height: 97%;
   margin: 0;
+  background-color: #0e0e12;
+  color: #e2e0ec;
+  font-family: 'Outfit', sans-serif;
 }
 
 #fullpage, .section {
@@ -30,12 +40,13 @@ html>body .slide {
 /* #Blockquotes
 ================================================== */
 blockquote {
-  border-left: 5px solid #ff6b35;
+  border-left: 5px solid #3cc8c8;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
+  color: #8a879e;
 }
 blockquote:before {
-  color: #ccc;
+  color: #2a2a38;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
@@ -45,12 +56,20 @@ blockquote:before {
 /* #Code
 ================================================== */
 .code-block {
-	background:#F1F1F1;
-	border: 1px solid #E1E1E1;
+	background: rgba(60, 200, 200, 0.12);
+	border: 1px solid #2a2a38;
 	border-radius: 4px;
 	font-size: 90%;
 	padding: .2rem .5rem;
-	font-family: 'Roboto Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+	font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+	color: #e2e0ec;
+}
+
+code {
+    background: rgba(60, 200, 200, 0.12);
+    border-radius: 3px;
+    padding: 0.1em 0.3em;
+    color: #3cc8c8;
 }
 
 
@@ -61,6 +80,8 @@ blockquote:before {
 }
 .sweet-alert {
     top: 30%;
+    background: #1e1e28;
+    color: #e2e0ec;
 }
 
 /* #General
@@ -70,7 +91,7 @@ blockquote:before {
 }
 
 .custom-hr {
-	border-top: 3px solid #E1E1E1;
+	border-top: 3px solid #2a2a38;
     margin-top: 1rem;
 }
 
@@ -84,28 +105,42 @@ p {
 
 .button-primary
 {
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
-    background-color: #ff6b35 !important;
-    border-color: #ff6b35 !important;
-    border-bottom: 2px #e55a28 solid !important;
-    border-right: 2px #e55a28 solid !important;
-    color: #fff !important;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+    background-color: #3cc8c8 !important;
+    border-color: #3cc8c8 !important;
+    border-bottom: 2px #2ba8a8 solid !important;
+    border-right: 2px #2ba8a8 solid !important;
+    color: #0e0e12 !important;
+    font-weight: 600;
 }
 
 .button-primary:hover
 {
-    background-color: #e55a28 !important;
+    background-color: #8ee8e0 !important;
+    border-color: #8ee8e0 !important;
 }
 
 .button-urgent
 {
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
-    background-color: #ff6b35 !important;
-    border: #ff6b35 !important;
-    border-bottom: 2px #e55a28 solid !important;
-    border-right: 2px #e55a28 solid !important;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+    background-color: #3cc8c8 !important;
+    border: #3cc8c8 !important;
+    border-bottom: 2px #2ba8a8 solid !important;
+    border-right: 2px #2ba8a8 solid !important;
+    color: #0e0e12 !important;
 }
 
+button, .button {
+    background-color: #1e1e28;
+    color: #e2e0ec;
+    border-color: #2a2a38;
+}
+
+button:hover, .button:hover {
+    background-color: #2a2a38;
+    color: #e2e0ec;
+    border-color: #3cc8c8;
+}
 
 button.button-previous:before {
 	content: "\2190";
@@ -128,7 +163,7 @@ button.button-next:after, a.button-next-lesson:after {
 }
 
 .six.columns label {
-    color: #999;
+    color: #8a879e;
     font-weight: normal;
     font-size: 0.8em;
     margin-top: 5px;
@@ -139,7 +174,7 @@ input[type="checkbox"] {
 }
 
 .spaces {
-    color:#888;
+    color: #8a879e;
 }
 
 
@@ -149,11 +184,13 @@ input[type="checkbox"] {
 	width: 100%;
     max-width: 100%;
 	height: 11.7em;
-	border: 1px #666 solid;
+	border: 1px #2a2a38 solid;
 	margin-bottom: 0em;
+	background-color: #16161d;
+	color: #e2e0ec;
 }
 code, kbd, pre, samp, .editor, .html-pad, .preformatted {
-	font: 1em/normal 'Roboto Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+	font: 1em/normal 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 .preformatted {
     font-size: 0.9em;
@@ -161,30 +198,32 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 .render-pad, .html-pad {
 	font-size: 0.9em;
 	height: 13em;
-	border: 1px #999 dotted; 
+	border: 1px #2a2a38 solid;
 	overflow: auto;
 	padding: 0.5em;
+	background-color: #16161d;
+	color: #e2e0ec;
 }
-.html-pad { 
+.html-pad {
 	display: none;
 }
 
 .lesson-number {
     font-size:5em;
-    color: #1a2b4a;
-    border: 10px #1a2b4a solid;
+    color: #3cc8c8;
+    border: 10px #3cc8c8 solid;
     width:150px;
     border-radius:50%;
     padding-left:22px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .muted {
-    color: #aaa;
+    color: #8a879e;
 }
 
 .muted a {
-    color: #aaa;
+    color: #8a879e;
 }
 
 /* mobile modifications */
@@ -212,7 +251,7 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
         font-size: 3rem;
         margin-bottom: 1rem;
     }
-    h2 {        
+    h2 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
@@ -307,10 +346,10 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 	height: 40px;
 	display:block;
 	width: 100%;
-	background: rgba(255, 255, 255, 1.0);
+	background: #16161d;
 	z-index:9;
 	text-align:center;
-	color: #333;
+	color: #e2e0ec;
 	padding: 15px 0 0 0;
 }
 
@@ -352,9 +391,8 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 	height: 100%;
 	outline: none;
 	border-radius: 50%;
-	background-color: #000;
-	background-color: rgba(255, 255, 255, 0.3);
-	text-indent: -999em; /* make the text accessible to screen readers */
+	background-color: rgba(60, 200, 200, 0.2);
+	text-indent: -999em;
 	cursor: pointer;
 	position: absolute;
 }
@@ -363,14 +401,12 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 	outline: none;
 }
 
-/* Individual styles and effects */
-
 /* Fill up */
 
 .dotstyle-fillup li a {
 	overflow: hidden;
 	background-color: transparent;
-	box-shadow: inset 0 0 0 2px #1a2b4a;
+	box-shadow: inset 0 0 0 2px #2a2a38;
 	transition: background 0.3s ease;
 }
 
@@ -381,14 +417,14 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 	height: 0;
 	left: 0;
 	width: 100%;
-	background-color: #1a2b4a;
-	box-shadow: 0 0 1px #1a2b4a;
+	background-color: #3cc8c8;
+	box-shadow: 0 0 1px #3cc8c8;
 	transition: height 0.3s ease;
 }
 
 .dotstyle-fillup li a:hover,
 .dotstyle-fillup li a:focus {
-	background-color: rgba(26, 43, 74, 0.2);
+	background-color: rgba(60, 200, 200, 0.15);
 }
 
 .dotstyle-fillup li.current a::after {
@@ -397,10 +433,10 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 
 /* fix some editor preview style issues */
 
-.render-pad li > pre, .render-pad li > preblockquote { 
+.render-pad li > pre, .render-pad li > preblockquote {
 	margin-left: 1em;
 }
-.render-pad li > p:not(:first-child) { 
+.render-pad li > p:not(:first-child) {
 	margin-left: 1em;
 }
 
@@ -423,10 +459,10 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
     font-size:1.5rem;
 }
 .render-pad h5 {
-    font-size:1.4rem;    
+    font-size:1.4rem;
 }
 .render-pad h6 {
-    font-size: 1.4rem;    
+    font-size: 1.4rem;
 }
 
 
@@ -449,6 +485,10 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
     width: 100%;
 }
 
+.markdown-reference td, .markdown-reference th {
+    border-color: #2a2a38;
+}
+
 /* fixup for list exercise with long ol number */
 #render_pad_8-3 ol {
     padding-left: 40px;
@@ -456,34 +496,40 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
 
 /* syntax highlighting for the "show generated HTML" tags */
 .hljs-tag {
-    color: maroon !important;
+    color: #fbbf24 !important;
     font-weight: normal !important;
 }
 .hljs-title {
-    color: maroon !important;
+    color: #fbbf24 !important;
     font-weight: normal !important;
 }
 
-/* Franklin Institute Branding */
+/* Franklin PKI Dark Theme overrides */
 h1, h2, h3, h4, h5, h6 {
-    color: #1a2b4a;
+    color: #e2e0ec;
 }
 
 a {
-    color: #ff6b35;
+    color: #3cc8c8;
 }
 
 a:hover {
-    color: #e55a28;
-}
-
-.editor {
-    border-color: #1a2b4a;
+    color: #8ee8e0;
 }
 
 .editor:focus {
-    border-color: #ff6b35;
+    border-color: #3cc8c8;
     outline: none;
+}
+
+/* Demo example text */
+.cd-product-description {
+    color: #e2e0ec;
+}
+
+/* Exercise instructions */
+.exercise-instructions p {
+    color: #e2e0ec;
 }
 
 /* CC-BY-SA Footer */
@@ -492,21 +538,22 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #1a2b4a;
-    color: rgba(255,255,255,0.7);
+    background: #16161d;
+    color: #8a879e;
     font-size: 0.7em;
     text-align: center;
     padding: 6px 0;
     z-index: 10;
+    border-top: 1px solid #2a2a38;
 }
 
 .cc-footer a {
-    color: rgba(255,255,255,0.9);
+    color: #3cc8c8;
     text-decoration: underline;
 }
 
 .cc-footer a:hover {
-    color: #ff6b35;
+    color: #8ee8e0;
 }
 
 @media (max-width: 737px) {

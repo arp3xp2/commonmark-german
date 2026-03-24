@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta charset="utf-8">
+    <title>Markdown Tutorial - Checklisten</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/normalize-skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="../css/points.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+
+    <div id="fullpage">
+
+    <div id="footer">
+        <div class="dotstyle dotstyle-fillup">
+            <ul>
+                <li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+                <li><a href="javascript:goToSlide(1);">2</a></li>
+                <li><a href="javascript:goToSlide(2);">3</a></li>
+                <li><a href="javascript:goToSlide(3);">4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section checklists">
+
+        <div class="slide 0 active">
+            <div class="container">
+                <div class="row noselect">
+                    <div class="twelve columns">
+                        <div class="lesson-number">11</div>
+                    </div>
+                </div>
+                <div class="row rowspacer">
+                    <div class="twelve columns">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="four columns">
+                        <h2>Checklisten</h2>
+                        <p>
+                            Checklisten sind Listen mit Checkboxen. Verwende <code>- [ ]</code> f&uuml;r offene und <code>- [x]</code> f&uuml;r erledigte Aufgaben.
+                        </p>
+                        <p>
+                            In Tools wie GitHub, Notion oder Obsidian werden daraus klickbare Checkboxen.
+                        </p>
+                        <p class="try-it">
+                            <button class="noselect button-primary button-next">Ausprobieren</button>
+                        </p>
+                    </div>
+                    <div class="eight columns">
+                        <div class="cd-product cd-container">
+                            <div class="cd-product-wrapper">
+                                <div class="cd-product-description" style="font-size:22px">
+                                    - [ ] Offen<br/>
+                                    - [x] Erledigt<br/>
+                                    - [ ] Noch offen<br/>
+                                </div>
+                                <ul>
+                                    <li class="cd-single-point" style="top:-20px;left:5px;">
+                                        <a class="cd-img-replace" href="#">More</a>
+                                        <div class="cd-more-info cd-left">
+                                            <p><code>- [ ]</code> erstellt eine offene Checkbox. Das Leerzeichen zwischen den Klammern ist wichtig.</p>
+                                            <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="cd-single-point" style="top:35px;left:5px;">
+                                        <a class="cd-img-replace" href="#">More</a>
+                                        <div class="cd-more-info cd-left">
+                                            <p><code>- [x]</code> erstellt eine abgehakte Checkbox. Das <code>x</code> steht f&uuml;r erledigt.</p>
+                                            <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="cd-single-point" style="top:90px;left:60px;">
+                                        <a class="cd-img-replace" href="#">More</a>
+                                        <div class="cd-more-info cd-left">
+                                            <p>Checklisten sind normale Listen, du kannst sie mit anderen Markdown-Elementen wie <code>**fett**</code> kombinieren.</p>
+                                            <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide 1">
+            <div class="container">
+                <div class="row exercise-instructions">
+                    <div class="twelve columns">
+                        <p>Mache daraus eine Checkliste mit offenen Aufgaben:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <textarea id="editor_10-1" class="editor">Einkaufen
+Staubsaugen
+W&#228;sche waschen</textarea>
+                    </div>
+                    <div class="six columns">
+                        <div id="render_pad_10-1" class="render-pad"></div>
+                        <div id="html_pad_10-1" class="html-pad"></div>
+                    </div>
+                </div>
+                <div class="row rowspacer">
+                    <div class="six columns">
+                        &nbsp;
+                    </div>
+                    <div class="six columns generated-check">
+                        <label class="noselect"><input id="ck_show_html_10-1" type="checkbox" class="show-html" /> Erzeugtes HTML anzeigen</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <p>
+                            <button id="btn_answer_10-1" class="noselect button button-answer">Tipp zeigen</button>
+                            <button id="btn_reset_10-1" class="noselect button button-reset">Zur&uuml;cksetzen</button>
+                        </p>
+                        <p>
+                            <button class="noselect button-primary button-next u-full-width">N&auml;chste &Uuml;bung</button>
+                            <button class="noselect button-primary button-previous u-full-width">Checklisten</button>
+                        </p>
+                    </div>
+                    <div class="six columns">
+                        <!-- empty -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide 2">
+            <div class="container">
+                <div class="row exercise-instructions">
+                    <div class="twelve columns">
+                        <p>Hake die ersten zwei Aufgaben als erledigt ab:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <textarea id="editor_10-2" class="editor">- [ ] Termin vereinbaren
+- [ ] Unterlagen vorbereiten
+- [ ] Bewerbung abschicken</textarea>
+                    </div>
+                    <div class="six columns">
+                        <div id="render_pad_10-2" class="render-pad"></div>
+                        <div id="html_pad_10-2" class="html-pad"></div>
+                    </div>
+                </div>
+                <div class="row rowspacer">
+                    <div class="six columns">
+                        &nbsp;
+                    </div>
+                    <div class="six columns generated-check">
+                        <label class="noselect"><input id="ck_show_html_10-2" type="checkbox" class="show-html" /> Erzeugtes HTML anzeigen</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <p>
+                            <button id="btn_answer_10-2" class="noselect button button-answer">Tipp zeigen</button>
+                            <button id="btn_reset_10-2" class="noselect button button-reset">Zur&uuml;cksetzen</button>
+                        </p>
+                        <p>
+                            <button class="noselect button-primary button-next u-full-width">N&auml;chste &Uuml;bung</button>
+                            <button class="noselect button-primary button-previous u-full-width">Vorherige &Uuml;bung</button>
+                        </p>
+                    </div>
+                    <div class="six columns">
+                        <!-- empty -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide 3">
+            <div class="container">
+                <div class="row exercise-instructions">
+                    <div class="twelve columns">
+                        <p>Erstelle eine Projekt-Checkliste mit &Uuml;berschrift. &quot;Recherche&quot; und &quot;Gliederung&quot; sind erledigt, der Rest noch nicht:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <textarea id="editor_10-3" class="editor">Projektarbeit
+Recherche
+Gliederung
+Entwurf schreiben
+Feedback einholen</textarea>
+                    </div>
+                    <div class="six columns">
+                        <div id="render_pad_10-3" class="render-pad"></div>
+                        <div id="html_pad_10-3" class="html-pad"></div>
+                    </div>
+                </div>
+                <div class="row rowspacer">
+                    <div class="six columns">
+                        &nbsp;
+                    </div>
+                    <div class="six columns generated-check">
+                        <label class="noselect"><input id="ck_show_html_10-3" type="checkbox" class="show-html" /> Erzeugtes HTML anzeigen</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <p>
+                            <button id="btn_answer_10-3" class="noselect button button-answer">Tipp zeigen</button>
+                            <button id="btn_reset_10-3" class="noselect button button-reset">Zur&uuml;cksetzen</button>
+                        </p>
+                        <p>
+                            <a href="99-end.html" id="btn_answer_10-3" class="noselect button button-primary button-next-lesson u-full-width">Weiter</a>
+                            <button class="noselect button-primary button-previous u-full-width">Vorherige &Uuml;bung</button>
+                        </p>
+                    </div>
+                    <div class="six columns">
+                        <!-- empty -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.2/doT.min.js"></script>
+
+    <script src="../js/exercises.js"></script>
+    <script src="../js/setup.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <script type="text/javascript">
+        var CURRENT_SECTION = 10;
+    </script>
+</body>
+</html>

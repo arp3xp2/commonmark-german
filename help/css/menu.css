@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-navigation/)
 
@@ -53,17 +53,17 @@ Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-na
   opacity: 1;
 }
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: #ff6b35;
+  background-color: #3cc8c8;
 }
 .no-touch #cd-vertical-nav a.is-selected .cd-label {
-  color: #ff6b35;
+  color: #3cc8c8;
 }
 
 .no-touch #cd-vertical-nav .cd-dot {
   height: 20px;
   width: 20px;
   margin-top: 7px;
-  background-color: #1a2b4a;
+  background-color: #2a2a38;
   transition: transform 0.2s, background-color 0.5s;
 }
 
@@ -73,11 +73,11 @@ Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-na
 
 .no-touch #cd-vertical-nav .cd-label {
   margin-right: 10px;
-  color: #aaa;
+  color: #8a879e;
   transform-origin: 100% 50%;
   font-size: 24px;
   transition: opacity 0.2s;
-  background-color: white;
+  background-color: #0e0e12;
 }
 
 /* Touch devices */
@@ -90,13 +90,13 @@ Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-na
   height: 44px;
   width: 44px;
   border-radius: 0.25em;
-  background: rgba(125, 125, 125, 0.9);
+  background: rgba(30, 30, 40, 0.9);
 }
 .touch .cd-nav-trigger span {
   position: absolute;
   height: 4px;
   width: 4px;
-  background-color: white/* #3e3947 */;
+  background-color: #3cc8c8;
   border-radius: 50%;
   left: 50%;
   top: 50%;
@@ -110,7 +110,7 @@ Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-na
   width: 100%;
   position: absolute;
   left: 0;
-  background-color: white;
+  background-color: #3cc8c8;
   border-radius: inherit;
 }
 .touch .cd-nav-trigger span::before {
@@ -135,7 +135,8 @@ Adapted from an article on CodyHouse (https://codyhouse.co/gem/vertical-fixed-na
   transition-property: transform;
   transition-duration: 0.2s;
   border-radius: 0.25em;
-  background-color: #1a2b4a;
+  background-color: #16161d;
+  border: 1px solid #2a2a38;
 }
 .touch #cd-vertical-nav ul {
 list-style: none;
@@ -143,15 +144,15 @@ list-style: none;
 .touch #cd-vertical-nav a {
   display: block;
   padding: 1em;
-  border-bottom: 1px solid rgba(62, 57, 71, 0.1);
-  color: white;
+  border-bottom: 1px solid #2a2a38;
+  color: #e2e0ec;
   text-decoration: none;
 }
 .touch #cd-vertical-nav a span:first-child {
   display: none;
 }
 .touch #cd-vertical-nav a.is-selected span:last-child {
-  color: #ff6b35;
+  color: #3cc8c8;
 }
 .touch #cd-vertical-nav.open {
   transform: scale(1);
@@ -160,10 +161,10 @@ list-style: none;
   background-color: transparent;
 }
 .touch #cd-vertical-nav.open + .cd-nav-trigger span {
-  background-color: rgba(62, 57, 71, 0);
+  background-color: rgba(60, 200, 200, 0);
 }
 .touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
-  background-color: white;
+  background-color: #3cc8c8;
   height: 3px;
   width: 20px;
   border-radius: 0;

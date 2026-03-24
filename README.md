@@ -1,10 +1,14 @@
-# CommonMark web page
+# CommonMark Tutorial — German Translation
 
-This project contains:
-- https://commonmark.org homepage
-- Markdown syntax [reference sheet](https://commonmark.org/help/)
-- 10 minute Markdown essentials [tutorial](https://commonmark.org/help/tutorial/)
+German translation of the [CommonMark Tutorial](https://commonmark.org/help/tutorial/).
 
-## About CommonMark
+**Live:** https://markdown-tutorial.pages.dev/
 
-CommonMark is a strongly defined, highly compatible version of Markdown syntax. You can try it [here](https://spec.commonmark.org/dingus/)
+## What's included
+- Markdown syntax reference in German
+- 10 interactive lessons (emphasis, paragraphs, headings, blockquotes, lists, links, images, code, nested lists, checklists)
+- Dark theme (Outfit + JetBrains Mono)
+
+## License
+
+Based on [commonmark/commonmark-web](https://github.com/commonmark/commonmark-web), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

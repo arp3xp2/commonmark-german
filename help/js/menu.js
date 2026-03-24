@@ -82,7 +82,7 @@ $(document).ready(function() {
 		</ul> \
 	</div> \
 	<a class="cd-nav-trigger cd-img-replace">Navigation öffnen<span></span></a> \
-	<div class="cc-footer">Franklin Institute · Basierend auf dem <a href="https://commonmark.org/help/tutorial/">CommonMark Tutorial</a> · Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div>';
+	<div class="cc-footer">Franklin Institute · <a href="https://github.com/arp3xp2/commonmark-german">Basierend auf dem CommonMark Tutorial</a> · Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div>';
 
 	var menuFn = doT.template(template);
 	$(document.body).append(menuFn({section: CURRENT_SECTION}));
