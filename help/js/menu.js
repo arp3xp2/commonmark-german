@@ -10,37 +10,37 @@ $(document).ready(function() {
 			<li> \
 				<a href="index.html" class="noselect {{? it.section == 0 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Intro</span> \
+					<span class="cd-label">Einführung</span> \
 				</a> \
 			</li> \
 			<li> \
 				<a href="02-emphasis.html" class="noselect {{? it.section == 1 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Emphasis</span> \
+					<span class="cd-label">Hervorhebung</span> \
 				</a> \
 			</li> \
 			<li> \
 				<a href="03-paragraphs.html" class="noselect {{? it.section == 2 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Paragraphs</span> \
+					<span class="cd-label">Absätze</span> \
 				</a> \
 			</li> \
 			<li> \
 				<a href="04-headings.html" class="noselect {{? it.section == 3 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Headings</span> \
+					<span class="cd-label">Überschriften</span> \
 				</a> \
 			</li> \
 			<li> \
 				<a href="05-blockquotes.html" class="noselect {{? it.section == 4 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Blockquotes</span> \
+					<span class="cd-label">Zitate</span> \
 				</a> \
 			</li> \
 			<li> \
 				<a href="06-lists.html" class="noselect {{? it.section == 5 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Lists</span> \
+					<span class="cd-label">Listen</span> \
 				</a> \
 			</li> \
 			<li> \
@@ -52,7 +52,7 @@ $(document).ready(function() {
 			<li> \
 				<a href="08-images.html" class="noselect {{? it.section == 7 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Images</span> \
+					<span class="cd-label">Bilder</span> \
 				</a> \
 			</li> \
 			<li> \
@@ -64,19 +64,26 @@ $(document).ready(function() {
 			<li> \
 				<a href="10-nestedLists.html" class="noselect {{? it.section == 9 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">Nested Lists</span> \
+					<span class="cd-label">Verschachtelte Listen</span> \
 				</a> \
 			</li> \
 			<li> \
-				<a href="99-end.html" class="noselect {{? it.section == 10 }}is-selected{{?}}"> \
+				<a href="11-checklists.html" class="noselect {{? it.section == 10 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
-					<span class="cd-label">The End</span> \
+					<span class="cd-label">Checklisten</span> \
+				</a> \
+			</li> \
+			<li> \
+				<a href="99-end.html" class="noselect {{? it.section == 11 }}is-selected{{?}}"> \
+					<span class="cd-dot"></span> \
+					<span class="cd-label">Geschafft!</span> \
 				</a> \
 			</li> \
 		</ul> \
 	</div> \
-	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>';
-    
+	<a class="cd-nav-trigger cd-img-replace">Navigation öffnen<span></span></a> \
+	<div class="cc-footer">Franklin Institute · Basierend auf dem <a href="https://commonmark.org/help/tutorial/">CommonMark Tutorial</a> · Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div>';
+
 	var menuFn = doT.template(template);
 	$(document.body).append(menuFn({section: CURRENT_SECTION}));
 	
