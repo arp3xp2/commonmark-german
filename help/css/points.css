@@ -48,8 +48,8 @@ Main components
 
 .cd-product-description {
   font-weight: bold;
-  font-family: 'Roboto Mono';
-  color: #aaaaaa;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e2e0ec;
   text-align: left;
   font-size: 30px;    
   line-height: 1.3;

@@ -5,7 +5,7 @@
 */
 	
 // Set up progress bar
-var nanobar = new Nanobar( {id:'bar', bg:'#33C3F0'} );
+var nanobar = new Nanobar( {id:'bar', bg:'#3cc8c8'} );
 var numberSlides = $(".slide").length;
 advanceBar(0);
 
