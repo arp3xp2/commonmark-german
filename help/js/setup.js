@@ -15,6 +15,10 @@ function goToSlide(n) {
 	slide.addClass("active");
 	updateSlideNavigation(n);
 	advanceBar(n);
+	// Reset hint countdown for new slide
+	if (typeof resetHintForActiveSlide === 'function') {
+		setTimeout(resetHintForActiveSlide, 50);
+	}
 }
 	
 function advanceBar(currentSlide) {
@@ -144,17 +148,15 @@ $(document).ready(function() {
 		generateMd(exerciseId);
 	});
 	
-	// Set up show answer buttons (disabled for 20s to encourage trying first)
-	$('.button-answer').each(function() {
-		var elementId = $(this)[0].id;
-		var exerciseId = getExerciseId(elementId);
-		var btn = $(this);
-
-		// Disable initially with countdown
+	// Set up show answer buttons (disabled with 20s countdown per slide)
+	function startHintCountdown(btn, exerciseId) {
+		// Clear any existing countdown
+		if (btn.data('countdown')) clearInterval(btn.data('countdown'));
+		var originalText = btn.data('originalText') || btn.text();
+		btn.data('originalText', originalText);
 		btn.prop('disabled', true);
 		btn.css({'opacity': '0.3', 'cursor': 'not-allowed'});
 		var seconds = 20;
-		var originalText = btn.text();
 		btn.text(originalText + ' (' + seconds + 's)');
 		var countdown = setInterval(function() {
 			seconds--;
@@ -167,6 +169,13 @@ $(document).ready(function() {
 				btn.text(originalText + ' (' + seconds + 's)');
 			}
 		}, 1000);
+		btn.data('countdown', countdown);
+	}
+
+	$('.button-answer').each(function() {
+		var elementId = $(this)[0].id;
+		var exerciseId = getExerciseId(elementId);
+		var btn = $(this);
 
 		// Set up click event for the button
 		btn.on('click', function(event){
@@ -174,6 +183,22 @@ $(document).ready(function() {
 			generateMd(exerciseId);
 		});
 	});
+
+	// Start countdown only for the hint button on the currently visible slide
+	function resetHintForActiveSlide() {
+		$('.slide.active .button-answer').each(function() {
+			var exerciseId = getExerciseId($(this)[0].id);
+			startHintCountdown($(this), exerciseId);
+		});
+	}
+
+	// Trigger on slide navigation
+	$('.button-next, .button-previous').on('click', function() {
+		setTimeout(resetHintForActiveSlide, 50);
+	});
+
+	// Initial: start countdown for the first visible slide
+	resetHintForActiveSlide();
     
   	// Set up reset buttons
 	$('.button-reset').each(function() {
