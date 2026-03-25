@@ -144,14 +144,32 @@ $(document).ready(function() {
 		generateMd(exerciseId);
 	});
 	
-	// Set up show answer buttons
+	// Set up show answer buttons (disabled for 20s to encourage trying first)
 	$('.button-answer').each(function() {
 		var elementId = $(this)[0].id;
 		var exerciseId = getExerciseId(elementId);
-		var htmlPadElement = $("#" + RENDER_PAD_ID_PREFIX + exerciseId)
-		
+		var btn = $(this);
+
+		// Disable initially with countdown
+		btn.prop('disabled', true);
+		btn.css({'opacity': '0.3', 'cursor': 'not-allowed'});
+		var seconds = 20;
+		var originalText = btn.text();
+		btn.text(originalText + ' (' + seconds + 's)');
+		var countdown = setInterval(function() {
+			seconds--;
+			if (seconds <= 0) {
+				clearInterval(countdown);
+				btn.prop('disabled', false);
+				btn.css({'opacity': '1', 'cursor': 'pointer'});
+				btn.text(originalText);
+			} else {
+				btn.text(originalText + ' (' + seconds + 's)');
+			}
+		}, 1000);
+
 		// Set up click event for the button
-		$(this).on('click', function(event){
+		btn.on('click', function(event){
 			$("#" + EDITOR_ID_PREFIX + exerciseId).val(exercises[exerciseId]["correctMd"]);
 			generateMd(exerciseId);
 		});
